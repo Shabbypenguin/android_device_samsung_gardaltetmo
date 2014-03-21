@@ -28,4 +28,24 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_PREBUILT_KERNEL := device/samsung/gardaltetmo/kernel
 
+BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
+BOARD_USES_MMCUTILS := true
+BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/gardaltetmo/recovery/graphics.c
+TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
+
+#TWRP
+RECOVERY_SDCARD_ON_DATA := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_NO_USB_STORAGE := true
+DEVICE_RESOLUTION := 480x800
+
+SP1_NAME := "efs"
+SP1_BACKUP_METHOD := image
+SP1_MOUNTABLE := 0
+TW_NO_SCREEN_BLANK := true
